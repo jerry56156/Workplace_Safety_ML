@@ -26,23 +26,10 @@ All injury definitions and formulas follow OSHA standards.
 
 ---
 
-## Repository Structure
-.
-├── filter_script.py
-├── filtered2016.csv
-├── filtered2017.csv
-├── filtered2018.csv
-├── filtered2019.csv
-├── filtered2020.csv
-├── filtered2021.csv
-├── filtered2022.csv
-├── filtered2023.csv
-├── filtered2024.csv
-├── nutrien.csv
-├── OSHA_Safety_Incident_ML.ipynb
-└── README.md
+## Project Contents
+The repository contains three main components (filter script, the notebook, and the train/test data). The `filter_script.py` script preprocesses raw OSHA establishment-level injury and illness datasets by cleaning fields, validating exposure data, standardizing formats, and exporting yearly `filteredYYYY.csv` files used for modeling. The `OSHA_Safety_Incident_ML.ipynb` notebook implements the full proof-of-concept pipeline, including data loading, OSHA metric construction (Total Recordable Cases and incident rate), industry-relative risk labeling, model training and evaluation, feature importance analysis, and hypothetical scenario simulations. The `nutrien.csv` file contains publicly reported, company-level environmental and emissions metrics used for contextual reference only; it is not used directly in model training but serves to ground the scenario analysis in realistic industrial operating conditions.
 
----
+
 
 ## Methodology
 
@@ -128,14 +115,6 @@ Results should be interpreted directionally only.
 
 ---
 
-## Intended Use
-- Technical interviews
-- Safety analytics demonstrations
-- Early-stage modeling discussions
-
-**Not intended for deployment or regulatory decision-making.**
-
----
 
 ## Disclaimer
 This project is for **educational and exploratory purposes only**.  
